@@ -3,6 +3,14 @@
 #ifndef PROBLEM2_H
 #define PROBLEM2_H
 
+long fib(long n){
+    if (n < 2) {
+        return 1;
+    } else {
+        return fib(n-1) + fib(n-2);
+    }
+}
+
 int* _fib(int n) {
     int* result = malloc(n * sizeof(int));
     result[0] = 1;
@@ -13,13 +21,6 @@ int* _fib(int n) {
     return result;
 };
 
-long fib(long n){
-    if (n < 2) {
-        return 1;
-    } else {
-        return fib(n-1) + fib(n-2);
-    }
-}
 
 long sum_of_even_fibs(long n) {
     int* fib_nums = _fib(n);
